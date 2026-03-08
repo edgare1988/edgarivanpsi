@@ -1,14 +1,28 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Data, NavigationEnd, Router } from '@angular/router';
+import { ActivatedRoute, Data, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { filter, map, mergeMap } from 'rxjs/operators';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  animations: [
+    trigger('routeAnimations', [
+      transition('* <=> *', [
+        style({ opacity: 0 }),
+        animate('250ms ease-in-out', style({ opacity: 1 }))
+      ])
+    ])
+  ],
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet?.activatedRouteData;
+  }
+  
   title = 'edgar-ivan-psi';
 
   constructor(
