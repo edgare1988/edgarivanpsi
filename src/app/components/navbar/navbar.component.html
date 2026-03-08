@@ -1,0 +1,177 @@
+<header
+  class="fixed left-0 right-0 top-0 z-50 border-b transition-all duration-300"
+  [ngClass]="{
+    'translate-y-0 bg-light border-graySoft backdrop-blur-md shadow-sm': isNavbarVisible && isScrolled,
+    'translate-y-0 bg-light border-transparent': isNavbarVisible && !isScrolled,
+    '-translate-y-full bg-light/95 border-transparent backdrop-blur-md': !isNavbarVisible
+  }"
+>
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+
+    <!-- Logo -->
+    <a
+      routerLink="/"
+      class="flex items-center gap-3"
+      (click)="closeMobileMenu()"
+      aria-label="Ir al inicio"
+    >
+      <img
+        src="assets/images/logo.png"
+        alt="Logo Edgar Iván Bautista Díaz Psicología Clínica"
+        class="h-14 w-auto object-contain sm:h-16"
+      />
+
+      <div class="hidden leading-tight sm:block">
+        <p class="text-xs font-semibold uppercase tracking-[0.28em] text-gold">
+          Psicología Clínica
+        </p>
+        <p class="text-base font-semibold text-primary sm:text-lg">
+          Edgar Iván Bautista Díaz
+        </p>
+      </div>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden items-center gap-8 lg:flex">
+      <a
+        routerLink="/"
+        routerLinkActive="text-gold"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="text-sm font-medium text-primary transition hover:text-gold"
+      >
+        Inicio
+      </a>
+
+      <a
+        routerLink="/servicios"
+        routerLinkActive="text-gold"
+        class="text-sm font-medium text-primary transition hover:text-gold"
+      >
+        Servicios
+      </a>
+
+      <a
+        routerLink="/enfoque"
+        routerLinkActive="text-gold"
+        class="text-sm font-medium text-primary transition hover:text-gold"
+      >
+        Enfoque
+      </a>
+
+      <a
+        routerLink="/faq"
+        routerLinkActive="text-gold"
+        class="text-sm font-medium text-primary transition hover:text-gold"
+      >
+        Preguntas frecuentes
+      </a>
+
+      <a
+        routerLink="/contacto"
+        routerLinkActive="text-gold"
+        class="text-sm font-medium text-primary transition hover:text-gold"
+      >
+        Contacto
+      </a>
+    </nav>
+
+   
+
+    <!-- Mobile button -->
+    <button
+      type="button"
+      class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-graySoft bg-white text-primary transition hover:border-gold hover:text-gold lg:hidden"
+      (click)="toggleMobileMenu()"
+      aria-label="Abrir menú"
+      [attr.aria-expanded]="mobileMenuOpen"
+    >
+      <svg
+        *ngIf="!mobileMenuOpen"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.8"
+        stroke="currentColor"
+        class="h-6 w-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </svg>
+
+      <svg
+        *ngIf="mobileMenuOpen"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.8"
+        stroke="currentColor"
+        class="h-6 w-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    *ngIf="mobileMenuOpen"
+    class="border-t border-graySoft bg-light lg:hidden"
+  >
+    <nav class="mx-auto flex max-w-7xl flex-col px-4 py-4 sm:px-6">
+      <a
+        routerLink="/"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="bg-white text-gold"
+        class="rounded-xl px-4 py-3 text-sm font-medium text-primary transition hover:bg-white hover:text-gold"
+        (click)="closeMobileMenu()"
+      >
+        Inicio
+      </a>
+
+      <a
+        routerLink="/servicios"
+        routerLinkActive="bg-white text-gold"
+        class="rounded-xl px-4 py-3 text-sm font-medium text-primary transition hover:bg-white hover:text-gold"
+        (click)="closeMobileMenu()"
+      >
+        Servicios
+      </a>
+
+      <a
+        routerLink="/enfoque"
+        routerLinkActive="bg-white text-gold"
+        class="rounded-xl px-4 py-3 text-sm font-medium text-primary transition hover:bg-white hover:text-gold"
+        (click)="closeMobileMenu()"
+      >
+        Enfoque
+      </a>
+
+      <a
+        routerLink="/faq"
+        routerLinkActive="bg-white text-gold"
+        class="rounded-xl px-4 py-3 text-sm font-medium text-primary transition hover:bg-white hover:text-gold"
+        (click)="closeMobileMenu()"
+      >
+        Preguntas frecuentes
+      </a>
+
+      <a
+        routerLink="/contacto"
+        routerLinkActive="bg-white text-gold"
+        class="rounded-xl px-4 py-3 text-sm font-medium text-primary transition hover:bg-white hover:text-gold"
+        (click)="closeMobileMenu()"
+      >
+        Contacto
+      </a>
+
+      
+    </nav>
+  </div>
+</header>

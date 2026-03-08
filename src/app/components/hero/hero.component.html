@@ -1,0 +1,115 @@
+<section appReveal="fade-up" revealDelay="100ms" class="relative overflow-hidden bg-light">
+
+  <!-- fondo decorativo -->
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute left-0 top-0 h-[420px] w-[420px] rounded-full bg-primary/5 blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 h-[380px] w-[380px] rounded-full bg-gold/10 blur-3xl"></div>
+  </div>
+
+  <div class="mx-auto grid max-w-7xl items-center gap-14 px-6 py-20 lg:grid-cols-2 lg:py-24">
+
+    <!-- TEXTO -->
+    <div class="p-4">
+
+      <span class="inline-flex items-center rounded-full border border-gold/30 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-gold shadow-sm">
+        Psicología Clínica Profesional
+      </span>
+
+      <h1 appReveal="fade-right" revealDelay="400ms"class="mt-6 text-4xl font-semibold leading-tight text-primary sm:text-5xl lg:text-6xl">
+        Psicología clínica con 
+        <span class="text-gold">claridad, ética</span>
+        y profundidad humana.
+      </h1>
+
+      <p class="mt-6 max-w-xl text-lg leading-8 text-textSoft">
+        Un espacio confidencial para trabajar ansiedad, crisis emocionales, autoestima y procesos de cambio, con atención presencial y virtual.
+      </p>
+
+      <!-- botones -->
+      <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+
+        <a
+          routerLink="/agenda"
+          class="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-sm font-semibold text-white shadow-md transition hover:opacity-90"
+        >
+          Agendar sesión
+        </a>
+
+        <a
+          routerLink="/servicios"
+          class="inline-flex items-center justify-center rounded-full border border-primary/15 bg-white px-8 py-4 text-sm font-semibold text-primary transition hover:border-gold hover:text-gold"
+        >
+          Conocer servicios
+        </a>
+
+      </div>
+
+      <!-- badges -->
+      <div class="mt-12 grid gap-4 sm:grid-cols-3">
+
+        <div class="rounded-xl border border-graySoft bg-white p-4 shadow-sm">
+          <p class="text-sm font-semibold text-primary">
+            Confidencialidad
+          </p>
+          <p class="mt-1 text-sm text-textSoft">
+            Espacio seguro y ética profesional
+          </p>
+        </div>
+
+        <div class="rounded-xl border border-graySoft bg-white p-4 shadow-sm">
+          <p class="text-sm font-semibold text-primary">
+            Presencial / Online
+          </p>
+          <p class="mt-1 text-sm text-textSoft">
+            Sesiones adaptadas a tu ritmo.
+          </p>
+        </div>
+
+        <div class="rounded-xl border border-graySoft bg-white p-4 shadow-sm">
+          <p class="text-sm font-semibold text-primary">
+            Proceso terapéutico
+          </p>
+          <p class="mt-1 text-sm text-textSoft">
+            Acompañamiento estructurado y profesional.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- IMAGEN -->
+    <div class="relative">
+
+      <div class="overflow-hidden rounded-[2rem] border border-graySoft bg-white shadow-[0_25px_80px_rgba(36,58,87,0.12)]">
+
+        <img
+          src="assets/images/hero.png"
+          alt="Consulta psicológica profesional"
+          class="h-[520px] w-full object-cover"
+        />
+
+      </div>
+
+      <!-- tarjeta flotante -->
+      <div appReveal="fade-left" revealDelay="400ms" class="absolute -bottom-8 right-6 hidden w-[260px] rounded-2xl border border-primary/10 bg-primary p-6 text-white shadow-xl lg:block">
+
+        <p class="text-xs uppercase tracking-[0.22em] text-gold">
+          ESPACIO TERAPÉUTICO
+        </p>
+
+        <h3 class="mt-2 text-lg font-semibold">
+          Presencial y virtual
+        </h3>
+
+        <p class="mt-2 text-sm leading-6 text-white/80">
+         Un entorno seguro para trabajar procesos personales con acompañamiento clínico.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
