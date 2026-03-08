@@ -14,6 +14,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { ServiceCardComponent } from './components/service-card/service-card.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { RevealDirective } from './shared/directives/reveal.directive';
+import { EnConstruccionComponent } from './shared/en-construccion/en-construccion.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { RevealDirective } from './shared/directives/reveal.directive';
     HeroComponent,
     ServiceCardComponent,
     FaqComponent,
-    RevealDirective
+    RevealDirective,
+    EnConstruccionComponent
   ],
   imports: [
     BrowserModule,

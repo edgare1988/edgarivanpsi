@@ -6,15 +6,39 @@ import { AboutComponent } from './pages/about/about.component';
 import { BookingComponent } from './pages/booking/booking.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FaqComponent } from './pages/faq/faq.component';
+import { EnConstruccionComponent } from './shared/en-construccion/en-construccion.component';
 
-const routes: Routes = [
-  { path: '', component: HomeComponent, data: { title: 'Inicio | Edgar Iván Psicología' } },
-  { path: 'servicios', component: ServicesComponent, data: { title: 'Servicios | Edgar Iván Psicología' } },
-  { path: 'enfoque', component: AboutComponent, data: { title: 'Enfoque | Edgar Iván Psicología' } },
-  { path: 'faq', component: FaqComponent, data: { title: 'FAQ | Edgar Iván Psicología' } },
-  { path: 'contacto', component: ContactComponent, data: { title: 'Contacto | Edgar Iván Psicología' } },
-  { path: 'agenda', component: BookingComponent, data: { title: 'Agenda | Edgar Iván Psicología' } },
-  { path: '**', redirectTo: '' }
+export const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+    data: { title: 'Inicio | Edgar Iván Bautista Díaz' }
+  },
+  {
+    path: 'servicios',
+    component: EnConstruccionComponent,
+    data: { title: 'Servicios | Edgar Iván Bautista Díaz' }
+  },
+  {
+    path: 'enfoque',
+    component: EnConstruccionComponent,
+    data: { title: 'Enfoque | Edgar Iván Bautista Díaz' }
+  },
+  {
+    path: 'preguntas-frecuentes',
+    component: EnConstruccionComponent,
+    data: { title: 'Preguntas frecuentes | Edgar Iván Bautista Díaz' }
+  },
+  {
+    path: 'contacto',
+    component: EnConstruccionComponent,
+    data: { title: 'Contacto | Edgar Iván Bautista Díaz' }
+  },
+  {
+    path: '**',
+    component: EnConstruccionComponent,
+    data: { title: 'Página en construcción | Edgar Iván Bautista Díaz' }
+  }
 ];
 
 @NgModule({
